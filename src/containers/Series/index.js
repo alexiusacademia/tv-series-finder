@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Intro from '../../components/Intro'
 import SeriesList from '../../components/SeriesList'
 
 class Series extends Component {
@@ -24,6 +25,7 @@ class Series extends Component {
         const {series, seriesName, isFetching} = this.state
         return (
             <div>
+                <Intro name="Alex" />
                 <input type="text" onChange={this.onInputChanged}></input>
 
                 {

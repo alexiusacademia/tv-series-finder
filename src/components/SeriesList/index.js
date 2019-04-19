@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import { Link } from 'react-router-dom'
 
 const SeriesList = (props) => {
     return (
@@ -7,7 +8,7 @@ const SeriesList = (props) => {
             <ul className="series-list">
                 { props.series.map(series => (
                     <li key={series.show.id}>
-                        { series.show.name }
+                        <Link to={`/details/${series.show.id}`}>{ series.show.name } </Link>
                     </li>
                 )) }
             </ul>
